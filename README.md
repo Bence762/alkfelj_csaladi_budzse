@@ -21,9 +21,9 @@ gyerek jog: kérés szülőtöl saját számlára . amit a szülő elutasíthat 
 
 gyerek/szülő jog:
 	
-	Minden felhasználónak a költés története található mg a bejelentkező oldalon,dátummal, dátum szerinti csökkenő sorrendben.
+	Minden felhasználónak a költés története található meg a bejelentkező oldalon,dátummal, dátum szerinti csökkenő sorrendben.
 	
-	Elérhető a hozzáadás menüpont, ahol ki lehet választani, hogy költés történt e vagy pluszpénz jött.
+	Elérhető a hozzáadás menüpont, ahol ki lehet választani, hogy költés történt-e vagy pluszpénz jött.
 	
 		A hozzáadás menüpontban ki lehet választani a költés/jövedelem típusát
 		
