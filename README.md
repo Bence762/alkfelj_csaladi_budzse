@@ -1,54 +1,27 @@
-családi büdzsé
+# FamilyBudge
 
-Készítsük el egy online családi büdzsé rendszeretét, ahol a családtagok feltölthetik 
-a költéseiket,amelyek megjelennek egy webes felületen.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.3.
 
-A webes felület tartalmazza magát az oldal , ahol a tagok rendszerezhetik a költéseiket.
+## Development server
 
-A főoldalon a rangtol függetlenül megjelennek  a legfrisebb költések. illetve a menüpontok.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Szülői jog:
+## Code scaffolding
 
-	Szülői joggal látható minden felhasználó költése, vagy bejövő pénz. 
-	
-	felhasználó szerkesztése  menüpont: Korlátozhatja a nem 
-	szülői joggal rendelkező felhasználó keretét. illetve hozzáadhat és levonhat a gyerek szintű felhasználótól.
-	
-	elutasíthatja illetve elfogadjhatja a gyerek jogú felhasználó kérvényeit.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-gyerek jog: kérés szülőtöl saját számlára . amit a szülő elutasíthat avgy elfogadhat
-	névvel, mennyiséggel kommenttel.
+## Build
 
-gyerek/szülő jog:
-	
-	Minden felhasználónak a költés története található meg a bejelentkező oldalon,dátummal, dátum szerinti csökkenő sorrendben.
-	
-	Elérhető a hozzáadás menüpont, ahol ki lehet választani, hogy költés történt-e vagy pluszpénz jött.
-	
-		A hozzáadás menüpontban ki lehet választani a költés/jövedelem típusát
-		
-	• 	költés	(kölcsön, étel, háztartási cikk, luxuscikk) illetve a mennyiséget és feltétlesen kommentet és képet.az levonódik az egyéni       összegből.
-		  (ha a levondó összeg minuszba megy, nem enged új költést  beírni, amíg a szülő jogú felhasználó nem ad hozzá keretet.Szülői jogú         felhasználó kerete nem mehet mínuszba.)
-		
-	• 	jövedelem(kölcsön,fizetés, nyeremény) illetve a mennyiség és feltételesen komment és kép, 
-	
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Running unit tests
 
-A program használatához először be kell jelentkeznie a felhasznlónak a
-felhasználónév és a jelszó megadásával. Ezt követően válnak elérhetővé a
-szerkesztési funkciók (illetve a kijelentkezés).	
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Az adatbázis az alábbi adatokat tárolja:
+## Running end-to-end tests
 
-•  felhasználó (név, azonosító, jelszó);
-•  kérés(azonosító, cím , összeg, komment)
-•  számlatörténet(azonosító,cím, típus,dátum ,összeg, komment,kép);	
- 
- 
-Szerepkörök:
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-• Szülő: Bejelentkezés után új költést tölthet fel,hozzáadhat/törölhet keretet más felhasználóknak.
+## Further help
 
-• Gyerek: Bejelentkezés után böngészheti a számlatörténetét, illetve hozzáadhat költést
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
