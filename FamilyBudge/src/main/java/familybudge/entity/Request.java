@@ -39,4 +39,12 @@ public class Request {
     @Column(nullable = true)
     private String comment;
     
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
+    public enum Status {
+        ADDED, REJECTED, ACCEPTED
+    }
+    
 }

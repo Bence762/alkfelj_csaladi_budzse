@@ -1,8 +1,6 @@
 package familybudge.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -11,11 +9,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Enumerated;
-import javax.persistence.EnumType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 @Data
@@ -36,10 +31,10 @@ public class Transaction {
     private String title;
 
     @Column(nullable = false)
-    private String type;
+    private String types;
     
     @Column(nullable = false)
-    private String date;
+    private String dates;
     
     @Column(nullable = false)
     private String quantity;

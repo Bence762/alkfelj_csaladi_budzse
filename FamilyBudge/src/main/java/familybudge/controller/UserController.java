@@ -35,6 +35,7 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<User> login(@RequestBody User user) {
         try {
+            System.out.println(user);
             return ResponseEntity.ok(userService.login(user));
         }
         catch (UserNotValidException e) {
@@ -45,7 +46,7 @@ public class UserController {
     @PostMapping("/logout")
     public ResponseEntity<User> logout(@RequestBody User user) {
         userService.logout();
-        return ResponseEntity.ok().build();
+        return ResponseEntity.status(204).build();
     }
     
 }
