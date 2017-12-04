@@ -1,0 +1,40 @@
+<h1 class="display-2">My Requests</h1>
+
+<div class="row">
+  <div class="col">
+    <!-- <status-filter [status]="selectedStatus" (onChange)="onFilterChange($event)"></status-filter> -->
+    <!-- Selected filter: {{selectedStatus}} -->
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Comment</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let issue of filteredIssues">
+          <th scope="row">{{ request.id }}</th>
+          <td>{{ request.title }}</td>
+          <td>
+            <!-- <a  [routerLink]="['/issues', issue.id]" {{ issue.description }}</a> -->
+              <a> {{ request.quantity }}</a>
+          </td>
+          <td>{{ request.comment }}</td>
+          <td>{{ request.status }}
+            <!-- <a mat-icon-button [routerLink]="['/issues', issue.id, 'edit']">
+              <mat-icon>edit</mat-icon>
+            </a> -->
+            <!-- <button mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon> -->
+            <!-- </button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <a mat-raised-button color="primary" routerLink="/issues/new">New issue</a> -->
+  </div>
+</div>

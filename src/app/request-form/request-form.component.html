@@ -1,0 +1,27 @@
+<form #transactionForm="ngForm" (ngSubmit)="submit(transactionForm)" (reset)="reset()">
+  
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput type="text" aria-describedby="titleHelp" placeholder="Enter title" name="title" [(ngModel)]="model.title" #title="ngModel">
+          <mat-error *ngIf="title.invalid && (title.dirty || title.touched) && title.errors.required">
+            Title is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+    </div>  
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput aria-describedby="quantityHelp" placeholder="Enter quantity" name="quantity" [(ngModel)]="model.quantity" #quantity="ngModel">
+          <mat-error *ngIf="quantity.invalid && (quantity.dirty || quantity.touched) && quantity.errors.required">
+            Quantity is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <textarea matInput aria-describedby="commentHelp" placeholder="Enter comment" name="comment" [(ngModel)]="model.comment" #comment="ngModel"></textarea>
+      </mat-form-field>
+    </div>  
+    <button type="submit" mat-raised-button color="primary" [disabled]="!transactionForm.valid">Save transaction</button>
+    <button type="reset" mat-button>Cancel</button>
+  </form>
+  

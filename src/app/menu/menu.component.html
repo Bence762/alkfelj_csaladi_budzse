@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/mainpage">
+    <mat-icon>home</mat-icon>
+    Home
+  </button>
+
+  <span class="fill-remaining-space" fxHide="false" fxHide.gt-sm></span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/myrequests">My requests</button>
+    <button mat-button routerLink="/newrequests">New requests</button>
+    <button mat-button routerLink="/mytransactions">My transactions</button>
+    <button mat-button routerLink="/newtransactions">New transactions</button>
+    <span class="authentication">
+    <div *ngIf="!authService.isLoggedIn">
+      <button mat-button routerLink="/login">Login</button>
+      <button mat-button routerLink="/register">Register</button>
+    </div>
+    <div *ngIf="authService.isLoggedIn">
+      Hello, valaki!
+      <button mat-button (click)="logout()">Logout</button>
+    </div>
+    </span>
+  </div>
+  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu xPosition="before" #menu="matMenu">
+  <button mat-menu-item routerLink="/myrequests">My requests</button>
+  <button mat-menu-item routerLink="/newrequests">New requests</button>
+  <button mat-menu-item routerLink="/mytransactions">My transactions</button>
+  <button mat-menu-item routerLink="/newtransactions">New transactions</button>
+  <span class="authentication">
+  <div *ngIf="!authService.isLoggedIn">
+    <button mat-menu-item routerLink="/login">Login</button>
+    <button mat-menu-item routerLink="/register">Register</button>
+  </div>
+  <div *ngIf="authService.isLoggedIn">
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </div>
+  </span>
+</mat-menu>
+
+<div class="container">
+
+  <router-outlet></router-outlet>
+
+</div>
