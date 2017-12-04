@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>255</x>
+      <y>0</y>
+      <w>390</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>User
+--
+- requests: List&lt;Request&gt;
+- transactions: List&lt;Transaction&gt;
+- id: long
+- username: string
+- password: string
+- role: Role
++ Role: enum
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>30</y>
+      <w>435</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Request
+--
+- user: User
+- id: long
+- title: string
+- quantity: int
+- comment: string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>480</y>
+      <w>510</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>Transaction
+--
+- user: User
+- id: long
+- title: string
+- type: string
+- date: string
+- quantity: string
+- comment: string
+- picture: string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>165</y>
+      <w>330</w>
+      <h>345</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+1..X</panel_attributes>
+    <additional_attributes>200.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>90</y>
+      <w>330</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+1..X</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
